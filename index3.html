@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rent</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<script>
+
+    function myFunction() {
+         alert("Your Order Has Placed successfully")
+        }
+    function missingdata(){
+        var ok=0;
+        if(document.getElementById("name").value==""){
+            alert("Name is Missing"); 
+            ok=1;
+        }
+        if(document.getElementById("payment2").value=="p"){
+            alert("Your Payment Method is Missing");
+             ok=1;
+        }
+        if(document.getElementById("Location1").value==""){
+            alert("Pickup Location is Missing"); 
+            ok=1;
+        }
+        if(document.getElementById("location2").value==""){
+            alert("Drop Off Location is Missing");
+             ok=1;
+        }
+        if(document.getElementById("date1").value==""){
+            alert(" Your Pickup Date is Missing ");
+             ok=1;
+        }
+        if(document.getElementById("date2").value==""){
+            alert(" Your Drop Off Date is Missing ");
+             ok=1;
+        }
+        if(document.getElementById("choose3").value=="h"){
+            alert("Your Car is Missing");
+             ok=1;
+        }
+    
+        if(document.getElementById("check").value==""){
+            alert("Do You Agree"); 
+            ok=1;
+        }
+        if(ok==0){ 
+            myFunction();
+        }
+        
+    }
+    
+
+</script>
+<body class="body4">
+    <form action="pro2.php"  method="POST">
+    <table width="100%" class="nav">
+        <tr>
+            <td>
+                <td widt="25%"><a href="index.html"><b>home</b></a></td>
+                <td widt="25%"><a href="#foot"><b>service</b></a></td>
+                <td widt="25%"><a href="#foot"><b>about</b></a></td>
+                <td widt="25%"><a href="#foot"><b>contact us</b></a></td>
+                <td widt="25%" class="m"><a href="buynow.html"><b>buy now</b></a></td>
+                <td widt="25%">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
+                <td widt="25%">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
+                <td widt="25%">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
+                <td widt="25%"><p>&#127757;</p></td>
+                <td widt="25%"><label for="language"><select >
+                    <option value="English">English</option>
+                    <option value="Arabic">Arabic</option>
+                    <option value="span">Spanish</option>
+                </select>
+            </label> 
+        </td>
+        <td widt="25%"><label class="filter">&#8646;</td>
+            <td widt="25%"><label><select >
+                <option>Filter</option>
+                <option >All</option>
+                <option >Sort By Price</option>
+                <option >Sort By rating</option>
+                </select></label> 
+            </td>
+        <td widt="25%"><p>&#128269;</p></td>
+        <td widt="25%"><input type="text"></td>
+    </td>
+</tr>
+</table>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="grid">
+    <div class="g1">
+        <h3 class="si1">We Make Your Drive Memorable.</h3>
+        <h5 class="si">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Let's Find a Great Deal For Your Rental Car.</h5>
+        <h5 class="si">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Select the best offer for you between all the available deals!</h5>
+        <h5 class="si">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Book Car & Enjoy Your Ride.</h5>
+    </div>
+    <div class="g2" id="g10">
+        <table class="tg">
+            <tr>
+                <td>
+                    <label for="">Name:
+                        <input type="name" id="name" name="name">
+    
+                    </label>
+                </td>
+
+                <td>
+                    <label for=""> Payment Method:
+                    <select name="" id="payment2">
+                    <option value="p"></option>
+                    <option value="r">Visa Card</option>
+                    <option value="r">Cash</option>
+                </select>
+            </label>  
+            </td>
+        </tr>
+            <tr>
+                
+                <td>
+                    <label for="">Pickup Location:
+                    <input type="Text" id="Location1" name="location1">
+                </label>
+                </td>
+                <td>
+                    <label for="">Drop Off:
+                    <input type="Text" id="location2" name="location2">
+                </label>
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Pickup Date:
+                    <input type="date" id="date1" name="date1">
+                </label>
+            </td>
+            <td><label for="">Drop Off Date:
+                <input type="date" id="date2" name="date2">
+            </label>
+        </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for=""> Car Model:
+                    <select name="" id="choose3">
+                    <option value="h"></option>
+                    <option value="a">Hyundai HD</option>
+                    <option value="a">Hunda Civic</option>
+                    <option value="a">Nissan Sentra</option>
+                    <option value="a">Hyundai Tucson</option>
+                    <option value="a">Lancer Shark</option>
+                    <option value="a">Kia Sportage</option>
+                </select>
+            </label>  
+            </td>
+            <td>
+                <input type="checkbox" class="roww" id="check" style="width: 28px; height: 18px;">
+                <label for="checkbox" style="font-size: large;">I Agree</label>
+            </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        <tr>
+            <td colspan="2">
+                <center>
+                <button class="but2" onclick="missingdata()"><b>Submit</b></button> 
+            </center>
+            </td>
+        </tr>
+
+
+        </table>
+    </form>
+
+
+    </div>
+    <div class="g3">
+        <img src="image\pexels-matheus-bertelli-799443.jpg" height="550" width="550">
+
+    </div>
+</div>
+<br>
+<div class="scroll">
+    <br>
+    <div class="mySlides">
+        
+        <div class="numbertext">1 / 6</div>
+        <a href="#g10" class="imgg">
+            <img src="image\ajoy-joseph-KnbwsTb72U8-unsplash.jpg" alt="" width="100%" height="260" >
+            <br>
+            <h3>Hyundai Hd.</h3>
+            <h4>200$/DAY</h4>
+        </a>
+
+      </div>
+      <div class="mySlides">
+        
+        <div class="numbertext"> 2 / 6</div>
+        <a href="#g10" class="imgg">
+
+            <img src="image\ajoy-joseph-90NvUOSEK0I-unsplash.jpg" alt="" width="100%" height="260" >
+            <br>
+            <h3>Honda Civic.</h3>
+            <h4>100$/DAY</h4>
+        </a>
+      </div>
+      <div class="mySlides">
+        
+        <div class="numbertext"> 3 / 6</div>
+        <a href="#g10" class="imgg">
+
+            <img src="image\pexels-esmihel-muhammad-15223535.jpg" alt="" width="100%" height="260">
+            <br>
+            <h3>Nissan Sentra.</h3>
+            <h4>130$/DAY</h4>
+        </a>
+      </div>
+      <div class="mySlides">
+        
+        <div class="numbertext"> 4 / 6</div>
+        <a href="#g10" class="imgg">
+
+            <img src="image\pexels-hyundai-motor-group-11194510.jpg" alt="" width="100%" height="260" >
+            <br>
+            <h3>Hyundai Tucson.</h3>
+            <h4>500$/DAY</h4>
+        </a>
+            
+      </div>
+      <div class="mySlides">
+        
+        <div class="numbertext"> 5 / 6</div>
+        <a href="#g10" class="imgg">
+
+            <img src="image\pexels-erik-mclean-7549077.jpg" alt="" width="100%" height="260">
+            <br>
+            <h3>Mitsubishi Lancer Shark.</h3>
+            <h4>360$/DAY</h4>
+        </a>
+      </div>
+      <div class="mySlides">
+        
+        <div class="numbertext"> 6 / 6</div>
+        <a href="#g10" class="imgg">
+
+            <img src="image\pexels-mike-bird-4037760.jpg" alt="" width="100%" height="260">
+            <br>
+            <h3>Kia Sportage.</h3>
+            <h4>400$/DAY</h4>
+        </a>
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+</div>
+<br>
+<br>
+<div class="c" style="text-align: center;">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span> 
+    <span class="dot" onclick="currentSlide(5)"></span> 
+    <span class="dot" onclick="currentSlide(6)"></span> 
+  </div>
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+
+<br>
+<br>
+<footer class="footer" id="foot">
+    <div class="container">
+     <div class="row">
+       <div class="footer-col">
+         <h4>Service</h4>
+         <ul>
+           <li><a href="#">Buy now</a></li>
+           <li><a href="#">Car Rent</a></li>
+           <li><a href="#">Find Your Dream Car</a></li>
+           
+         </ul>
+       </div>
+       <div class="footer-col">
+         <h4>Get Help</h4>
+         <ul>
+           <li><a href="#">FAQ</a></li>
+           <li><a href="#">shipping</a></li>
+           <li><a href="#">returns</a></li>
+           <li><a href="#">order status</a></li>
+           <li><a href="#">payment options</a></li>
+         </ul>
+       </div>
+       <div class="footer-col">
+         <h4>About Us</h4>
+         <ul>
+           <li><a href="#">&#128241; 02554369849</a></li>
+           <li><a href="#">&#128241; 03699786516</a></li>
+           <li><a href="#">&#128231; carrent@gmail.com</a></li>
+           <li><a href="#">&#128231; dddddt@gmail.com</a></li>
+         </ul>
+       </div>
+       <div class="footer-col2">
+        <h4 class="socialh">follow us</h4>
+         <div class="social-links">
+           <a href="#"><img src="sympol\icons8-twitter-squared-30.png" width="40px"></a>
+           <a href="#"><img src="sympol\icons8-linkedin-30.png" width="40px"></a>
+           <a href="#"><img src="sympol\icons8-instagram-30.png" width="40px" ></a>
+           <a href="#"><img src="sympol\icons8-facebook-30.png" width="40px"></a>
+         </div>
+       </div>
+     </div>
+    </div>
+ </footer>
+
+</body>
+</html>

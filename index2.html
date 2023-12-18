@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your Dream Car</title>
+   <link rel="stylesheet" href="style.css">
+   <script>
+    const search = () =>{
+        const searchbox  = document.getElementById("search-item").value.toUpperCase();
+        const storeitems = document.getElementById("product-list");
+        const product = document.querySelectorAll(".data");
+        const pname= document.getElementsByTagName("h4");
+
+        for(let i=0;i<pname.length ;i++){
+
+            let match=product[i].getElementsByTagName('h4')[0];
+
+            if(match){
+                let textvalue= match.textContent || match.innerHTML
+
+                if(textvalue.toUpperCase().indexOf(searchbox) >-1){
+                    product[i].style.display="";
+                }
+                else{
+                    product[i].style.display="none";
+                }
+            }
+        }
+    }
+   </script>
+
+</head>
+<body class="body2">
+                <table width="100%" class="nav">
+                    <tr>
+                        <td>
+                        <td widt="25%"><a href="index.html"><b>home</b></a></td>
+                        <td widt="25%"><a href="#foot"><b>service</b></a></td>
+                        <td widt="25%"><a href="#foot"><b>about</b></a></td>
+                        <td widt="25%"><a href="#foot"><b>contact us</b></a></td>
+                        <td widt="25%" class="m"><a href="buynow.html"><b>buy now</b></a></td>
+                        <td widt="25%">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
+                        <td widt="25%">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
+                        <td widt="25%">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
+                        <td widt="25%"><p>&#127757;</p></td>
+                        <td widt="25%"><label for="language"><select >
+                                <option value="English">English</option>
+                                <option value="Arabic">Arabic</option>
+                                <option value="span">Spanish</option>
+                                </select></label> </td>
+                                <td widt="25%"><label class="filter">&#8646;</td>
+                                    <td widt="25%"><label ><select >
+                                        <option>Filter</option>
+                                        <option >All</option>
+                                        <option >Sort By Price</option>
+                                        <option >Sort By rating</option>
+                                        </select></label> 
+                                    </td>
+                                    <form action="">
+                                    <td widt="25%"><p>&#128269;</p></td>
+                                   <td widt="25%"><input type="text" id="search-item" placeholder="search-product" onkeyup="search()"></td>
+                                </form>
+                        </td>
+                        </tr>
+                         </table>
+                         <br>
+                         <br>
+                         <br>
+                <div id="product-list">
+                <center>
+                    <br>
+                    <br>
+                    
+                <div class="data">
+                    <br>
+                    <img src="image\dekler-ph-iMwC9xwsu8I-unsplash.jpg" class="dataimg">
+                <h4>Mercedes G-Class</h4>
+                <p class="p">This car comes with an 8-cylinder engine with a capacity of 4000 cc, connected to a dual turbocharger that generates 422 horsepower and a maximum torque of 610 Newton/meters, supported by a 9-speed automatic transmission. The car accelerates from zero to 100 km/h in 6 seconds. The maximum speed of the car is 210 km/h</p>
+                <br>
+                <h1 class="p1">&nbsp; 118,960$</h1>
+                <p class="stars"> &starf; &starf; &starf; &starf;</p>
+                <a href="buynow.html" class="b" ><b class="m">Buy now</b></a>
+                </div>
+            </center>
+            
+            <br>
+            <center>
+            <div class="data">
+                <br>
+                <img src="image\1680129671.jpg" class="dataimg">
+                <h4>Porsche 911 Carrera GTS</h4>
+                <p class="p">At the rear of this 911 GTS is a new three-litre turbocharged six-cylinder engine with 450 hp (331 kW) and a maximum torque of 550 steven-metres between 2,150 and 5,000 rpm. This engine generates an additional 30 hp (22 kW) of power compared to the current 911 Carrera S models, and an additional 20 hp (15 kW), and accelerates from 0 to 100 km/h faster at 0.2 seconds.</p>
+                <br>
+                <h1 class="p1">&nbsp; 74,900$</h1>
+                <p class="stars"> &starf; &starf; &starf; &starf;</p>
+                <a href="buynow.html" class="b" ><b class="m">Buy now</b></a>
+            </div>
+        </center>
+        
+        <br>
+        <center>
+        <div class="data">
+            <br>
+            <img src="image\1680129564.jpg" class="dataimg">
+            <h4>BMW M8 competition</h4>
+            <p class="p">Car with an eight-cylinder engine with a power of 617 horsepower and a capacity of 4.4 liters, and a torque of 553 lb-ft at 1800 rpm. The engine is also connected to an 8-speed automatic transmission. The car engine accelerates from 0 to 100 km in 2.5 seconds, as well as from 0 to 170 km in 6.3 seconds. While the maximum engine speed is 305 km/h.</p>
+                <br>
+                <h1 class="p1">&nbsp; 140,795$</h1>
+           
+            <p class="stars"> &starf; &starf; &starf; &starf; &starf;</p>
+            <a href="buynow.html" class="b" ><b class="m">Buy now</b></a>
+           
+        </div>
+    </center>
+    
+    <br>
+    <center>
+    <div class="data">
+        <br>
+        <img src="image\1680129578.jpg" class="dataimg">
+        <h4>BMW i8</h4>
+        <p>BMW i8 accelerates from 0 to 100 km/h (62 mph) in 4.4 seconds and has an electronically limited top speed of 250 km/h (155 mph). The 2015 i8 has a 7.1 kWh lithium-ion battery pack that provides an all-electric range of 37 km (23 mi) under the New European Driving Cycle. According to the US EPA cycle, the range in EV mode is 24 km (15 mi)</p>
+        <br>
+        <h1 class="p1">&nbsp; $71,995</h1>
+        <p class="stars"> &starf; &starf; &starf; &starf; &starf;</p>
+        <a href="buynow.html" class="b" ><b class="m">Buy now</b></a>
+    </div>
+</center>
+<br>
+<center>
+    <div class="data">
+        <br>
+        <img src="image\pexels-wavyvisuals-18748240.jpg" class="dataimg">
+        <h4>Toyota Supra</h4>
+        <p class="p">The car has 335 horsepower produced by the modified engine. The torque of 500 Nm pushes you up steep mountain roads, and all of this is delivered precisely and smoothly through an 8-speed automatic transmission that takes you at an amazing speed from 0 to 100 km/h in just 4.3 seconds</p>
+                <br>
+                <h1 class="p1">&nbsp; 46,635$</h1>
+        <p class="stars"> &starf; &starf; &starf; &starf; &starf;</p>
+        <a href="buynow.html" class="b" ><b class="m">Buy now</b></a>
+    </div>
+</center>
+</div>
+
+
+
+<br>
+<br>
+<footer class="footer" id="foot">
+    <div class="container">
+     <div class="row">
+       <div class="footer-col">
+         <h4>Service</h4>
+         <ul>
+           <li><a href="#">Buy now</a></li>
+           <li><a href="#">Car Rent</a></li>
+           <li><a href="#">Find Your Dream Car</a></li>
+           
+         </ul>
+       </div>
+       <div class="footer-col">
+         <h4>Get Help</h4>
+         <ul>
+           <li><a href="#">FAQ</a></li>
+           <li><a href="#">shipping</a></li>
+           <li><a href="#">returns</a></li>
+           <li><a href="#">order status</a></li>
+           <li><a href="#">payment options</a></li>
+         </ul>
+       </div>
+       <div class="footer-col">
+         <h4>About Us</h4>
+         <ul>
+           <li><a href="#">&#128241; 02554369849</a></li>
+           <li><a href="#">&#128241; 03699786516</a></li>
+           <li><a href="#">&#128231; carrent@gmail.com</a></li>
+           <li><a href="#">&#128231; dddddt@gmail.com</a></li>
+         </ul>
+       </div>
+       <div class="footer-col2">
+        <h4 class="socialh">follow us</h4>
+         <div class="social-links">
+           <a href="#"><img src="sympol\icons8-twitter-squared-30.png" width="40px"></a>
+           <a href="#"><img src="sympol\icons8-linkedin-30.png" width="40px"></a>
+           <a href="#"><img src="sympol\icons8-instagram-30.png" width="40px" ></a>
+           <a href="#"><img src="sympol\icons8-facebook-30.png" width="40px"></a>
+         </div>
+       </div>
+     </div>
+    </div>
+ </footer>
+
+
+</body>
+</html>
